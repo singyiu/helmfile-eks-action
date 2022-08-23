@@ -21,9 +21,9 @@ RUN chmod +x /usr/local/bin/helm
 
 
 RUN helm plugin install https://github.com/databus23/helm-diff --version 3.1.3 && \
-    helm plugin install https://github.com/futuresimple/helm-secrets && \
-    helm plugin install https://github.com/hypnoglow/helm-s3.git && \
-    helm plugin install https://github.com/aslafy-z/helm-git.git 
+    helm plugin install https://github.com/futuresimple/helm-secrets --version 2.0.3 && \
+    helm plugin install https://github.com/hypnoglow/helm-s3.git --version 0.12.0 && \
+    helm plugin install https://github.com/aslafy-z/helm-git.git --version 0.11.2
 
 RUN wget https://github.com/roboll/helmfile/releases/download/v0.138.7/helmfile_linux_amd64 && mv helmfile_linux_amd64 usr/local/bin/helmfile 
 RUN chmod +x /usr/local/bin/helmfile
